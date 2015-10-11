@@ -1,0 +1,32 @@
+{
+  "siteName": {
+    "value": "lovelyjubblyMVC6"
+  },
+  "hostingPlanName": {
+    "value": "Default0"
+  },
+  "siteLocation": {
+    "value": "North Europe"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "serverName": {
+    "value": "lovelyjubblymvc6db"
+  },
+  "serverLocation": {
+    "value": "North Europe"
+  },
+  "administratorLogin": {
+    "value": "lovelyjubblymvc6db"
+  },
+  "administratorLoginPassword": {
+    "value": "DarthVader72"
+  },
+  "databaseName": {
+    "value": "lovelyjubblymvc6db"
+  }
+}

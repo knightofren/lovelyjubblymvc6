@@ -1,0 +1,10 @@
+{
+  "Data": {
+    "DefaultConnection": {
+      "Connectionstring": "Server=tcp:lovelyjubblymvc6db.database.windows.net,1433;Database=lovelyjubblymvc6db;User ID=lovelyjubblymvc6db@lovelyjubblymvc6db;Password=DarthVader72;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;"
+    }
+  },
+  "ApplicationInsights": {
+    "InstrumentationKey": "e744ccfb-53c0-41aa-a184-9948a6d61273"
+  }
+}
