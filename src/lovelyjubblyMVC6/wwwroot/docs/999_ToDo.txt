@@ -1,0 +1,11 @@
+﻿1) edit not updated in edge and ie? seems to work locally
+
+2) metro/repository/use dto so no need for ko refresh (Services folder - Dal, Caching, HttpContext)
+3) Model and ViewModel (DTO) on both client and server side
+4) use sass rather than less?
+5) Async dal and everything in chain
+6) Middleware LocaleResolver and HttpContext
+7) redo portfolio page in azure so can close discountaspnet
+8) ordering and filtering api data in javascript 
+http://docs.asp.net/projects/mvc/en/latest/getting-started/first-web-api.html
+

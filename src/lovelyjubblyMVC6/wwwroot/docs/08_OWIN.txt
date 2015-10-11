@@ -1,0 +1,3 @@
+﻿http://benfoster.io/blog/how-to-write-owin-middleware-in-5-different-steps
+https://visualstudiomagazine.com/articles/2015/05/01/inject-custom-middleware.aspx
+http://www.codeproject.com/Articles/864725/ASP-NET-Understanding-OWIN-Katana-and-the-Middlewa

@@ -1,0 +1,1 @@
+﻿http://ef.readthedocs.org/en/latest/getting-started/aspnet5.html

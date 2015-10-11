@@ -1,0 +1,25 @@
+﻿Entity Framework 7 beta 5
+MVC 6
+ASP.NET 5
+
+Knockout 3.3
+Javascript/Typescript 1.5
+Metro UI 3
+SASS or LESS
+Bundling
+Bootstrap 3.3.5
+HTML5
+CSS3
+
+OData
+Resharper 9.2
+
+OWIN middleware
+MEF
+ASP.NET Identity
+Powershell (deploy scripts etc)
+Azure
+Application Insights
+
+Web Essentials 2015
+Gulp

@@ -1,0 +1,3 @@
+﻿http://www.asp.net/vnext/overview/aspnet-vnext/create-a-web-api-with-mvc-6
+
+http://docs.asp.net/projects/mvc/en/latest/getting-started/first-web-api.html

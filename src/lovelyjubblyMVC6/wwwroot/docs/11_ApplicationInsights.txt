@@ -1,0 +1,1 @@
+﻿https://azure.microsoft.com/en-gb/documentation/articles/app-insights-asp-net-five/

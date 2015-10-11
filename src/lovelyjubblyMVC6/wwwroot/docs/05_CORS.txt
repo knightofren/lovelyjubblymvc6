@@ -1,0 +1,1 @@
+﻿http://stackoverflow.com/questions/29100538/how-do-you-enable-cross-origin-requests-cors-in-asp-net-5-mvc-6

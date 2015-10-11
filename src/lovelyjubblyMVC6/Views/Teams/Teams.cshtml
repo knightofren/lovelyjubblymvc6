@@ -1,0 +1,66 @@
+﻿<!--show teams with add/edit/delete functionality-->
+@{
+    ViewBag.Title = "Teams";
+}
+
+<div class="page-header">
+    <h2 class="text-center">Teams</h2>
+</div>
+
+<div class="row" id="divTeam">
+    <div class="col-md-4">
+        <div class="panel panel-info">
+
+            <div class="panel-body">
+
+                <form data-bind="submit: team.updateTeam">
+
+                    <div class="panel-heading">
+                        <h2 class="panel-title" data-bind="text: team.AddEditStatus"></h2>
+                    </div>
+
+                    <!--addTeam or updateTeam-->
+                    <div class="form-group">
+                        <label for="inpTeamName">Team Name</label>
+                        <input id="inpTeamName" type="text" class="form-control" data-bind="value: team.TeamName" />
+                        <label id="lblTeamName" data-bind="text: team.TeamName"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpLogo">Logo</label>
+                        <input id="inpLogo" type="text" class="form-control" data-bind="value: team.Logo" />
+                        <label id="lblLogo" data-bind="text: team.Logo"></label>
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+                <button data-bind="click:team.clearInputFields()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Teams</h2>
+            </div>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody data-bind="foreach: team.teams">
+                    <tr>
+                        <td data-bind="text: TeamId"></td>
+                        <td data-bind="text: TeamName"></td>
+                        <td><input type="button" class="btn btn-info btn-xs" value="edit" data-bind="click: $root.team.editTeam" /></td>
+                        <td><input type="button" class="btn btn-danger btn-xs" value="delete " data-bind="click: $root.team.removeTeam" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

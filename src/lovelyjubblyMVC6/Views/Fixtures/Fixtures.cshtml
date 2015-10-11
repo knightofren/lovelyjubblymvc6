@@ -1,0 +1,89 @@
+﻿<!--show fixtures with add/edit/delete functionality-->
+@{
+    ViewBag.Title = "Fixtures";
+}
+
+<div class="page-header">
+    <h2 class="text-center">Fixtures</h2>
+</div>
+
+<div class="row" id="divFixture">
+    <div class="col-md-4">
+        <div class="panel panel-info">
+
+            <div class="panel-body">
+
+                <form data-bind="submit: fixture.updateFixture">
+
+                    <div class="panel-heading">
+                        <h2 class="panel-title" data-bind="text: fixture.AddEditStatus"></h2>
+                    </div>
+                    <!--addFixture or updateFixture-->
+                    <div class="form-group">
+                        <label for="inpSeason">Season</label>
+                        <season-dropdown params="value: fixture.selectedSeason" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inpWeek">Week</label>
+                        <week-dropdown params="value: fixture.selectedWeek"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpAwayTeam">Away Team</label>
+                        <awayteam-dropdown params="value: fixture.selectedAwayTeamId"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpAwayScore">Score</label>
+                        <input id="inpAwayScore" type="text" class="form-control" data-bind="value: fixture.AwayTeamScore" />
+                        <label id="lblAwayScore" data-bind="text: fixture.AwayTeamScore"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpHomeTeam">Home Team</label>
+                        <hometeam-dropdown params="value: fixture.selectedHomeTeamId"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpHomeScore">Score</label>
+                        <input id="inpHomeScore" type="text" class="form-control" data-bind="value: fixture.HomeTeamScore" />
+                        <label id="lblHomeScore" data-bind="text: fixture.HomeTeamScore"></label>
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+                <button data-bind="click:fixture.clearInputFields()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">Fixtures</h2>
+            </div>
+            <table class="table table-striped table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Season</th>
+                        <th>Week</th>
+                        <th>Away Name</th>
+                        <th>Away Score</th>
+                        <th>Home Name</th>
+                        <th>Home Score</th>
+                    </tr>
+                </thead>
+
+                <tbody data-bind="foreach: fixture.fixtures">
+                    <tr>
+                        <td data-bind="text: FixtureId"></td>
+                        <td data-bind="text: Season"></td>
+                        <td data-bind="text: Week"></td>
+                        <td data-bind="text: AwayTeamName"></td>
+                        <td data-bind="text: AwayTeamScore"></td>
+                        <td data-bind="text: HomeTeamName"></td>
+                        <td data-bind="text: HomeTeamScore"></td>
+                        <td><input type="button" class="btn btn-info btn-xs" value="edit" data-bind="click: $root.fixture.editFixture" /></td>
+                        <td><input type="button" class="btn btn-danger btn-xs" value="delete " data-bind="click: $root.fixture.removeFixture" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

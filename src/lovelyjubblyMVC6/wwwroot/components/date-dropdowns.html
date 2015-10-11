@@ -1,0 +1,8 @@
+﻿<div id="birthDates" class="inputBlock form-group">
+    <select class="form-control" name="birthYear" data-bind="optionsText: 'name', options: years, value:selectedYear, optionsValue: 'id'"></select>
+    <select class="form-control" name="birthMonth" data-bind="optionsText: 'name', options: months, value:selectedMonth, optionsValue: 'id'"></select>
+    <select class="form-control" name="birthDay" data-bind="options: days, value:selectedDay"></select>
+    <label id="lblFixtureYear" data-bind="text: selectedYear"></label>
+    <label id="lblFixtureMonth" data-bind="text: selectedMonth"></label>
+    <label id="lblFixtureDay" data-bind="text: selectedDay"></label>
+</div>
