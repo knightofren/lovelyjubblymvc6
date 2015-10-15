@@ -1,2 +1,38 @@
 ﻿[
+  {
+    "outputFile": "wwwroot/css/siteMetro.css",
+    "inputFile": "wwwroot/css/siteMetro.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metro.css",
+    "inputFile": "wwwroot/css/metro.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metro-icons.css",
+    "inputFile": "wwwroot/css/metro-icons.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metro-responsive.css",
+    "inputFile": "wwwroot/css/metro-responsive.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metro-schemes.css",
+    "inputFile": "wwwroot/css/metro-schemes.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metr.css",
+    "inputFile": "wwwroot/css/metr.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metro-icon.css",
+    "inputFile": "wwwroot/css/metro-icon.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metro-responsiv.css",
+    "inputFile": "wwwroot/css/metro-responsiv.less"
+  },
+  {
+    "outputFile": "wwwroot/css/metro-schem.css",
+    "inputFile": "wwwroot/css/metro-schem.less"
+  }
 ]

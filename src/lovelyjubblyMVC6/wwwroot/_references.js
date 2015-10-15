@@ -9,6 +9,7 @@
 /// <reference path="scripts/domReady.js" />
 /// <reference path="scripts/knockout.js" />
 /// <reference path="scripts/knockout.validation.js" />
+/// <reference path="scripts/lodash.js" />
 /// <reference path="scripts/main.js" />
 /// <reference path="scripts/require.js" />
 /// <reference path="scripts/text.js" />

@@ -7,5 +7,6 @@
 6) Middleware LocaleResolver and HttpContext
 7) redo portfolio page in azure so can close discountaspnet
 8) ordering and filtering api data in javascript 
+9) Localisation
 http://docs.asp.net/projects/mvc/en/latest/getting-started/first-web-api.html
 
