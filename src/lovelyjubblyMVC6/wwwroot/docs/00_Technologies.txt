@@ -16,6 +16,7 @@ Resharper 9.2
 
 OWIN middleware
 MEF
+Claims Based Authentication
 ASP.NET Identity
 Powershell (deploy scripts etc)
 Azure

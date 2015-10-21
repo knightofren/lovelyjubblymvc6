@@ -10219,6 +10219,11 @@ input[type="submit"].link:active {
   top: .3125rem;
   margin-left: -1.5rem;
 }
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .image-container {
   display: inline-block;
   position: relative;

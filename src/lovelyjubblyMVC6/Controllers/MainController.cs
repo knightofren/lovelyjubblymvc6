@@ -11,6 +11,21 @@ namespace lovelyjubblyMVC6.Controllers
         public IActionResult Index()
         {
             return View();
-        } 
+        }
+
+        public IActionResult HallOfFame()
+        {
+            return View();
+        }
+
+        public IActionResult SuperbowlOdds()
+        {
+            return View();
+        }
+
+        public IActionResult Links()
+        {
+            return View();
+        }
     }
 }
