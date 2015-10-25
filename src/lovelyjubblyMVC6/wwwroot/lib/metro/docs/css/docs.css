@@ -58,7 +58,7 @@ body {
         position: relative !important;
     }
     .page-content {
-        padding-top: 0 !important;
+        padding-top: 10px;
     }
 }
 

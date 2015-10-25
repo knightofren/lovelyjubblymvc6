@@ -11,6 +11,9 @@ Bootstrap 3.3.5
 HTML5
 CSS3
 
+
+Localization 
+
 OData
 Resharper 9.2
 

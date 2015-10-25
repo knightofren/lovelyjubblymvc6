@@ -2745,7 +2745,7 @@ a {
 @font-face {
   font-family: "PT Serif Caption";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   src: local("Cambria"), local("PT Serif Caption"), local("PTSerif-Caption"), url(https://themes.googleusercontent.com/static/fonts/ptserifcaption/v6/7xkFOeTxxO1GMC1suOUYWWhBabBbEjGd1iRmpyoZukE.woff) format('woff');
 }
 @font-face {
@@ -2757,7 +2757,7 @@ a {
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   src: local("Segoe UI"), local("Open Sans"), local("OpenSans"), url(https://themes.googleusercontent.com/static/fonts/opensans/v8/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
 @font-face {
@@ -3256,7 +3256,7 @@ body {
   font-family: "Segoe UI", "Open Sans", sans-serif, serif;
   font-size: 0.875rem;
   line-height: 1.1;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 #font .light {
@@ -3264,7 +3264,7 @@ body {
   font-style: normal;
 }
 #font .normal {
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 #font .bold {
@@ -3333,7 +3333,7 @@ h3 .small,
 h4 .small,
 h5 .small,
 h6 .small {
-  font-weight: 400;
+  font-weight: 300;
   font-size: .7em;
   line-height: 1;
   color: #777;
@@ -3343,7 +3343,7 @@ h6 .small {
   font-style: normal;
 }
 .text-normal {
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 .text-bold {
@@ -3434,7 +3434,7 @@ abbr {
   display: inline;
 }
 address {
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   margin: .625rem 0;
 }
@@ -3519,10 +3519,17 @@ dl.horizontal dd {
   margin-left: 11.25rem;
 }
 a {
-  color: #2086bf;
+  color: #ffffff;
 }
 a:visited {
-  color: #2086bf;
+  color: #ffffff;
+}
+a.links {
+  color: #ffffff;
+  text-decoration: underline;
+}
+a.links:visited {
+  color: #ffffff;
 }
 hr {
   border: 0;
@@ -6847,9 +6854,9 @@ a.tag {
 .round-button.primary,
 .cycle-button.primary,
 .square-button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .round-button.primary:active,
 .cycle-button.primary:active,
@@ -6919,7 +6926,7 @@ a.tag {
 .cycle-button.link,
 .square-button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
@@ -6930,7 +6937,7 @@ a.tag {
 .cycle-button.link:active,
 .square-button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .square-button {
@@ -7099,9 +7106,9 @@ a.square-button:hover {
   background-color: #ffffff;
 }
 .command-button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .command-button.primary:active {
   background: #1B6EAE;
@@ -7147,14 +7154,14 @@ a.square-button:hover {
 }
 .command-button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
 .command-button.link:hover,
 .command-button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .command-button small {
@@ -7289,9 +7296,9 @@ a.square-button:hover {
   background-color: #ffffff;
 }
 .image-button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .image-button.primary:active {
   background: #1B6EAE;
@@ -7337,14 +7344,14 @@ a.square-button:hover {
 }
 .image-button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
 .image-button.link:hover,
 .image-button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .image-button:active {
@@ -7499,9 +7506,9 @@ a.image-button {
   background-color: #ffffff;
 }
 .shortcut-button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .shortcut-button.primary:active {
   background: #1B6EAE;
@@ -7547,14 +7554,14 @@ a.image-button {
 }
 .shortcut-button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
 .shortcut-button.link:hover,
 .shortcut-button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .shortcut-button .icon,
@@ -7717,9 +7724,9 @@ a.shortcut-button {
   top: 100%;
 }
 .split.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .split.primary:active {
   background: #1B6EAE;
@@ -7850,9 +7857,9 @@ a.shortcut-button {
   height: 3.125rem;
 }
 .button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .button.primary:active {
   background: #1B6EAE;
@@ -7898,14 +7905,14 @@ a.shortcut-button {
 }
 .button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
 .button.link:hover,
 .button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 a.button,
@@ -8096,9 +8103,9 @@ div.square-button.big-button {
   background-color: #ffffff;
 }
 .toolbar .toolbar-button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .toolbar .toolbar-button.primary:active {
   background: #1B6EAE;
@@ -8144,14 +8151,14 @@ div.square-button.big-button {
 }
 .toolbar .toolbar-button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
 .toolbar .toolbar-button.link:hover,
 .toolbar .toolbar-button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .toolbar .toolbar-button.mini-button {
@@ -8345,9 +8352,9 @@ div.square-button.big-button {
   background-color: #ffffff;
 }
 .v-toolbar .toolbar-button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .v-toolbar .toolbar-button.primary:active {
   background: #1B6EAE;
@@ -8393,14 +8400,14 @@ div.square-button.big-button {
 }
 .v-toolbar .toolbar-button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
 .v-toolbar .toolbar-button.link:hover,
 .v-toolbar .toolbar-button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .v-toolbar .toolbar-button.mini-button {
@@ -8632,7 +8639,7 @@ div.square-button.big-button {
   padding: .3em 1em;
   float: left;
   text-decoration: none;
-  color: #2086bf;
+  color: #ffffff;
   position: relative;
 }
 .breadcrumbs2 a:hover {
@@ -9514,9 +9521,9 @@ input[type="submit"].dropdown-toggle.drop-marker-light:after {
 input[type="button"].primary,
 input[type="reset"].primary,
 input[type="submit"].primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 input[type="button"].primary:active,
 input[type="reset"].primary:active,
@@ -9586,7 +9593,7 @@ input[type="button"].link,
 input[type="reset"].link,
 input[type="submit"].link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
@@ -9597,7 +9604,7 @@ input[type="button"].link:active,
 input[type="reset"].link:active,
 input[type="submit"].link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .switch,
@@ -11352,9 +11359,9 @@ input[type="submit"].link:active {
   background-color: #ffffff;
 }
 .wizard .actions button.primary {
-  background: #2086bf;
+  background: #ffffff;
   color: #ffffff;
-  border-color: #2086bf;
+  border-color: #ffffff;
 }
 .wizard .actions button.primary:active {
   background: #1B6EAE;
@@ -11400,14 +11407,14 @@ input[type="submit"].link:active {
 }
 .wizard .actions button.link {
   background: transparent;
-  color: #2086bf;
+  color: #ffffff;
   border-color: transparent;
   text-decoration: underline;
 }
 .wizard .actions button.link:hover,
 .wizard .actions button.link:active {
   background: transparent;
-  color: #114968;
+  color: #cccccc;
   border-color: transparent;
 }
 .wizard .actions button:last-child {

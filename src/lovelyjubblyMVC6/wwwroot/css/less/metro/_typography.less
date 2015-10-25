@@ -19,7 +19,7 @@ body {
 	}
 
 	.normal {
-		font-weight: 400;
+		font-weight: 300; //changed from 400
 		font-style: normal;
 	}
 
@@ -86,7 +86,7 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
 	margin: .625rem 0;
 	small, .small {
-		font-weight: 400;
+		font-weight: 300;  //changed from 400
 		font-size: .7em;
 		line-height: 1;
 		color: #777;
@@ -318,6 +318,14 @@ dl {
 
 a {
 	color: @linkColor;
+	&:visited {
+		color: @linkVisitedColor;
+	}
+}
+
+a.links {
+	color: @linkColor;
+    text-decoration: underline; //added
 	&:visited {
 		color: @linkVisitedColor;
 	}

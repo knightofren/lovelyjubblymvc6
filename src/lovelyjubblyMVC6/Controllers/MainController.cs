@@ -27,5 +27,10 @@ namespace lovelyjubblyMVC6.Controllers
         {
             return View();
         }
+
+        public IActionResult SeasonPredictions()
+        {
+            return View();
+        }
     }
 }

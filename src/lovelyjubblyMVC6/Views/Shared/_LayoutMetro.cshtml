@@ -13,7 +13,10 @@
         <link href="~/css/metro-icons.css" rel="stylesheet"/>
         <link href="~/css/metro-responsive.css" rel="stylesheet"/>
         <link href="~/css/metro-schemes.css" rel="stylesheet" />
-        <link href="~/lib/metro/docs/css/docs.css" rel="stylesheet" />
+        <link href="~/lib/metro/docs/css/docs.css" rel="stylesheet"/>
+        <!--jquery ui-->
+        <link rel="stylesheet" href="~/lib/jqueryui/themes/smoothness/jquery-ui.css">
+        <script src="~/lib/metro/docs/js/jquery-2.1.3.min.js"></script>
     </environment>
     <environment names="Staging,Production">
         <!--metro ui-->
@@ -21,7 +24,10 @@
         <link href="~/css/metro-icons.css" rel="stylesheet" />
         <link href="~/css/metro-responsive.css" rel="stylesheet" />
         <link href="~/css/metro-schemes.css" rel="stylesheet"/>
-        <link href="~/lib/metro/docs/css/docs.css" rel="stylesheet" />
+        <link href="~/lib/metro/docs/css/docs.css" rel="stylesheet"/>
+        <!--jquery ui-->
+        <link rel="stylesheet" href="~/lib/jqueryui/themes/smoothness/jquery-ui.css">
+        <script src="~/lib/metro/docs/js/jquery-2.1.3.min.js"></script>
         @*<link href="~/bundles/bundle.min.css" rel="stylesheet" />*@
     </environment>
 </head>
@@ -44,10 +50,10 @@
                             <li><a href="Denver.html">Denver Broncos</a></li>
                             <li><a href="GreenBay.html">Green Bay Packers</a></li>
                             <li><a href="Houston.html">Houston Texans</a></li>
-                            <li><a href="Indianapolis.html">Indianapolis Colts</a></li>
                             <li><a href="KansasCity.html">Kansas City Chiefs</a></li>
                             <li><a href="Miami.html">Miami Dolphins</a></li>
                             <li><a href="Minnesota.html">Minnesota Vikings</a></li>
+                            <li><a href="NewEngland.html">New England Patriots</a></li>
                             <li><a href="NewOrleans.html">New Orleans Saints</a></li>
                             <li><a href="NYGiants.html">New York Giants</a></li>
                             <li><a href="NYJets.html">New York Jets</a></li>
@@ -63,7 +69,7 @@
                     <li>
                         <a href="#" class="dropdown-toggle">Main</a>
                         <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="SeasonPredictions.html">Season Predictions</a></li>
+                            <li><a href="SeasonPredictions">Season Predictions</a></li>
                             <li><a href="SuperbowlOdds">Superbowl Odds</a></li>
                             <li><a href="HallOfFame">Hall Of Fame</a></li>
                             <li class="divider"></li>
@@ -147,14 +153,12 @@
 
     <environment names="Development">
         <!--metro ui-->
-        <script src="~/lib/metro/docs/js/jquery-2.1.3.min.js"></script>
         <script src="~/lib/metro/docs/js/metro.js"></script>
         @*<script src="~/lib/metro/docs/js/docs.js"></script>*@
         <script src="~/lib/metro/docs/js/prettify/run_prettify.js"></script>
     </environment>
     <environment names="Staging,Production">
         <!--metro ui-->
-        <script src="~/lib/metro/docs/js/jquery-2.1.3.min.js"></script>
         <script src="~/lib/metro/docs/js/metro.js"></script>
         @*<script src="~/lib/metro/docs/js/docs.js"></script>*@
         <script src="~/lib/metro/docs/js/prettify/run_prettify.js"></script>

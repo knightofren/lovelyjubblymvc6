@@ -1,4 +1,17 @@
-﻿@{
+﻿@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
+@addTagHelper "*, lovelyjubblyMVC6"
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutMetro.cshtml";
 }
+
+<div class="container page-content">
+
+    @*<div bs-progress-min="1"
+         bs-progress-max="5"
+         bs-progress-value="2">
+    </div>*@
+
+    <a bs-twitter-share-url="http://lovelyjubbly.azurewebsites.net/en-GB/Gameplan/Main/Index"></a>
+</div>
