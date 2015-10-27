@@ -7,9 +7,19 @@ using lovelyjubblyMVC6.DataAccess;
 namespace lovelyjubblyMVC6.Migrations
 {
     [ContextType(typeof(lovelyjubblyMVC6WebApiContext))]
-    partial class lovelyjubblyMVC6WebApiContextModelSnapshot : ModelSnapshot
+    partial class editteam
     {
-        public override void BuildModel(ModelBuilder builder)
+        public override string Id
+        {
+            get { return "20151027191524_editteam"; }
+        }
+        
+        public override string ProductVersion
+        {
+            get { return "7.0.0-beta5-13549"; }
+        }
+        
+        public override void BuildTargetModel(ModelBuilder builder)
         {
             builder
                 .Annotation("SqlServer:DefaultSequenceName", "DefaultSequence")
@@ -34,7 +44,7 @@ namespace lovelyjubblyMVC6.Migrations
             
             builder.Entity("lovelyjubblyMVC6.Models.Division", b =>
                 {
-                    b.Property<int?>("DivisionId")
+                    b.Property<int>("DivisionId")
                         .GenerateValueOnAdd()
                         .StoreGeneratedPattern(StoreGeneratedPattern.Identity)
                         .Annotation("SqlServer:ValueGeneration", "Identity");

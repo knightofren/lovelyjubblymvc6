@@ -1,12 +1,15 @@
 ﻿1) edit not updated in edge and ie? seems to work locally
 
-1) add division, coachimage, fixtureimage, headerimage, cheerleaderimage to team model
-2) twitter taghelper
-3) webcontext
+1) inject webcontext
+2) add division, coachimage, fixtureimage, headerimage, cheerleaderimage to team model
+> team and fixture view model update
+3) twitter taghelper, scoreboard taghelper
 4) contact page
 5) localisation and middleware
 6) override bootstrap and metro not inline
- 
+
+ef 7 rc1 november
+
 ClientSide variables
 2) metro/repository/use dto so no need for ko refresh (Services folder - Dal, Caching, HttpContext)
 3) Model and ViewModel (DTO) on both client and server side

@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Text;
+using System.Threading;
+using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Loader.IIS;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.AspNet.Razor.Runtime.TagHelpers;
 using Microsoft.AspNet.Razor.TagHelpers;
+using Newtonsoft.Json;
 
 namespace lovelyjubblyMVC6.Helpers
 {
@@ -98,6 +105,46 @@ namespace lovelyjubblyMVC6.Helpers
             string twitterShare = anchor + script.ToString();
 
             output.Content.Append(twitterShare);
+        }
+    }
+
+    [TargetElement("script", Attributes = ClientVariablesAttributeName)]
+    public class ClientVariablesTagHelper : TagHelper 
+    {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        //inject httpContext into class
+        public ClientVariablesTagHelper(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        private const string ClientVariablesAttributeName = "bs-client-variables";
+
+        /// <summary>
+        /// An expression to be evaluated against the current model.
+        /// </summary>
+        [HtmlAttributeName(ClientVariablesAttributeName)]
+        public bool ClientVariables { get; set; }
+
+        public override void Process(TagHelperContext context, TagHelperOutput output)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            // Build ClientSide Model
+            sb.AppendLine("var Model = {");
+            sb.AppendLine("     'debug'                         : " + JsonConvert.SerializeObject(Debugger.IsAttached) + ",");
+            sb.AppendLine("httpMethod : " + JsonConvert.SerializeObject(_httpContextAccessor.HttpContext.Request.Method));
+            sb.AppendLine("userAgent : " + JsonConvert.SerializeObject(_httpContextAccessor.HttpContext.Request.Headers["user-agent"]));
+            //sb.AppendLine("     'currentCulture'                : " + JsonConvert.SerializeObject(Thread.CurrentThread.CurrentCulture.Name) + ",");
+            //sb.AppendLine("     'currentUiCulture'              : " + JsonConvert.SerializeObject(Thread.CurrentThread.CurrentUICulture.Name));
+
+            sb.AppendLine("};");
+
+            // End script tag
+            sb.AppendLine("</script>");
+
+            output.Content.Append(sb.ToString());
         }
     }
 }

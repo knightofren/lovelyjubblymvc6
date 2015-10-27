@@ -69,12 +69,12 @@
                     <li>
                         <a href="#" class="dropdown-toggle">Main</a>
                         <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="SeasonPredictions">Season Predictions</a></li>
-                            <li><a href="SuperbowlOdds">Superbowl Odds</a></li>
-                            <li><a href="HallOfFame">Hall Of Fame</a></li>
+                            <li><a asp-controller="Main" asp-action="SeasonPredictions">Season Predictions</a></li>
+                            <li><a asp-controller="Main" asp-action="SuperbowlOdds">Superbowl Odds</a></li>
+                            <li><a asp-controller="Main" asp-action="HallOfFame">Hall Of Fame</a></li>
                             <li class="divider"></li>
-                            <li><a href="Links">Links</a></li>
-                            <li><a href="Contact.html">Contact</a></li>
+                            <li><a asp-controller="Main" asp-action="Links">Links</a></li>
+                            <li><a asp-controller="Main" asp-action="Contact">Contact</a></li>
                         </ul>
                     </li>
                     <li>
@@ -119,7 +119,16 @@
                             <li><a href="1992.html">1992</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://forum.gameplan.org.uk/viewforum.php?f=9&sid=c44a50e759b28dd287ad52a0f7609940">Forum</a></li>
+                    <li>
+                        <a href="http://forum.gameplan.org.uk/viewforum.php?f=9&sid=c44a50e759b28dd287ad52a0f7609940">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle">Admin</a>
+                        <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                            <li><a asp-controller="Teams" asp-action="Teams">Teams</a></li>
+                            <li><a asp-controller="Fixtures" asp-action="Fixtures">Fixtures</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <span class="app-bar-pull"></span>
             </div>

@@ -2,10 +2,10 @@
 
     return function teamViewModel() {
 
-        function team(teamId, teamName, logo) {
+        function team(teamId, teamName, logoImage) {
             this.TeamId = teamId;
             this.TeamName = teamName;
-            this.Logo = logo;
+            this.LogoImage = logoImage;
         }
 
         var self = this;
@@ -17,7 +17,7 @@
 
         self.Id = ko.observable(undefined);
         self.TeamName = ko.observable().extend({ required: { onlyIf: self.validationEnabled, message: 'Please enter a Team Name' }, minLength: 5, maxLength: 50 });
-        self.Logo = ko.observable();
+        self.LogoImage = ko.observable();
 
         self.AddEditStatus = ko.observable('Add');
 
@@ -33,7 +33,7 @@
                 contentType: 'application/json',
                 success: function (data) {
                     self.TeamName(data.TeamName);
-                    self.Logo(data.Logo);
+                    self.LogoImage(data.LogoImage);
                     self.AddEditStatus('Edit');
                 },
                 error: function (err) {
@@ -54,7 +54,7 @@
 
                 if (self.errors().length == 0) {
 
-                    var tAdd = new team(self.Id(), self.TeamName(), self.Logo());
+                    var tAdd = new team(self.Id(), self.TeamName(), self.LogoImage());
 
                     var dataObjectAdd = ko.toJSON(tAdd);
 
@@ -64,9 +64,9 @@
                         data: dataObjectAdd,
                         contentType: 'application/json',
                         success: function (result) {
-                            self.teams.push(new team(result.TeamId, result.TeamName, result.Logo));
+                            self.teams.push(new team(result.TeamId, result.TeamName, result.LogoImage));
                             self.TeamName('');
-                            self.Logo('');
+                            self.LogoImage('');
                         },
                         error: function (err) {
                             console.log(err);
@@ -87,7 +87,7 @@
 
                     var url = 'http://lovelyjubblymvc6.azurewebsites.net/api/Teams/Update';
 
-                    var tEdit = new team(self.Id(), self.TeamName(), self.Logo());
+                    var tEdit = new team(self.Id(), self.TeamName(), self.LogoImage());
 
                     var dataObjectEdit = ko.toJSON(tEdit);
 
@@ -99,13 +99,13 @@
                         success: function (data) {
                             //remove from array, re-add and sort
                             self.teams.remove(function (item) { return item.TeamId == self.Id(); });
-                            self.teams.push(new team(self.Id(), self.TeamName(), self.Logo()));
+                            self.teams.push(new team(self.Id(), self.TeamName(), self.LogoImage()));
                             self.teams.sort(function (l, r) { return l.TeamName > r.TeamName ? 1 : -1; });
 
                             //clear inputs
                             self.Id(undefined);
                             self.TeamName('');
-                            self.Logo('');
+                            self.LogoImage('');
                             self.AddEditStatus('Add');
                         },
                         error: function (err) {
@@ -141,7 +141,7 @@
 
             //clear input fields
             self.TeamName('');
-            self.Logo('');
+            self.LogoImage('');
             self.Id(undefined);
 
             //clear validation messages
@@ -157,7 +157,7 @@
             success: function (data) {
                 self.teams.removeAll();
                 $.each(data, function (i) {
-                    self.teams.push(new team(data[i].TeamId, data[i].TeamName, data[i].Logo));
+                    self.teams.push(new team(data[i].TeamId, data[i].TeamName, data[i].LogoImage));
                 });
             },
             error: function (err) {

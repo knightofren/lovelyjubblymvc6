@@ -2,7 +2,7 @@
 {
     public interface IDivision
     {
-        int DivisionId { get; set; }
+        int? DivisionId { get; set; }
         string DivisionName { get; set; }
     }
 }

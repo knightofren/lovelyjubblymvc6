@@ -8,7 +8,7 @@ namespace lovelyjubblyMVC6.Models
 {
     public partial class Division : IDivision
     {
-        public int DivisionId { get; set; }
+        public int? DivisionId { get; set; }
         public string DivisionName { get; set; }
     }
 }
