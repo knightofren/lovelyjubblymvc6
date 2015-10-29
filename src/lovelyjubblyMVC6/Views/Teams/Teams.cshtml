@@ -22,13 +22,32 @@
                     <!--addTeam or updateTeam-->
                     <div class="form-group">
                         <label for="inpTeamName">Team Name</label>
-                        <input id="inpTeamName" type="text" class="form-control" data-bind="value: team.TeamName" />
+                        <input id="inpTeamName" type="text" class="form-control" data-bind="value: team.TeamName"/>
                         <label id="lblTeamName" data-bind="text: team.TeamName"></label>
                     </div>
                     <div class="form-group">
-                        <label for="inpLogo">Logo</label>
-                        <input id="inpLogo" type="text" class="form-control" data-bind="value: team.Logo" />
-                        <label id="lblLogo" data-bind="text: team.Logo"></label>
+                        <label for="inpCheerleader">Cheerleader Image</label>
+                        <input id="inpCheerleader" type="text" class="form-control" data-bind="value: team.CheerleaderImage"/>
+                        <label id="lblCheerleader" data-bind="text: team.CheerleaderImage"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpCoach">Coach Image</label>
+                        <input id="inpCoach" type="text" class="form-control" data-bind="value: team.CoachImage"/>
+                        <label id="lblCoach" data-bind="text: team.CoachImage"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpHeader">Header Image</label>
+                        <input id="inpHeader" type="text" class="form-control" data-bind="value: team.HeaderImage"/>
+                        <label id="lblHeader" data-bind="text: team.HeaderImage"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="inpDivision">Division</label>
+                        <division-dropdown params="value: team.selectedDivisionId" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inpLogo">Logo Image</label>
+                        <input id="inpLogo" type="text" class="form-control" data-bind="value: team.LogoImage" />
+                        <label id="lblLogo" data-bind="text: team.LogoImage"></label>
                     </div>
                     <button type="submit">Save</button>
                 </form>

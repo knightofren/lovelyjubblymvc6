@@ -15,12 +15,12 @@ namespace lovelyjubblyMVC6.DataAccess
 
         public IQueryable<Team> GetTeams()
         {
-            return _db.Teams.AsQueryable().OrderBy(t => t.TeamName);
+            return _db.Teams.Include(t => t.Division).AsQueryable().OrderBy(t => t.TeamName);
         }
 
         public Team GetTeamById(int teamId)
         {
-            return _db.Teams.FirstOrDefault(c => c.TeamId == teamId);
+            return _db.Teams.Include(t => t.Division).FirstOrDefault(c => c.TeamId == teamId);
         }
 
         public Team GetTeamByTeamName(string teamName)
@@ -30,6 +30,8 @@ namespace lovelyjubblyMVC6.DataAccess
 
         public Team AddTeam(Team team)
         {
+            team.Division = _db.Divisions.FirstOrDefault(t => t.DivisionId == team.DivisionId);
+
             _db.Teams.Add(team);
             _db.SaveChanges();
 
@@ -39,6 +41,8 @@ namespace lovelyjubblyMVC6.DataAccess
         public Team UpdateTeam(Team team)
         {
             team.TeamId = team.TeamId;
+
+            team.Division = _db.Divisions.FirstOrDefault(t => t.DivisionId == team.DivisionId);
 
             _db.Teams.Attach(team);
             _db.Entry(team).State = EntityState.Modified;
@@ -115,6 +119,21 @@ namespace lovelyjubblyMVC6.DataAccess
             _db.SaveChanges();
 
             return true;
+        }
+
+        public IQueryable<Division> GetDivisions()
+        {
+            return _db.Divisions.AsQueryable().OrderBy(t => t.DivisionName);
+        }
+
+        public Division GetDivisionById(int divisionId)
+        {
+            return _db.Divisions.FirstOrDefault(c => c.DivisionId == divisionId);
+        }
+
+        public Division GetDivisionByDivisionName(string divisionName)
+        {
+            return _db.Divisions.FirstOrDefault(c => c.DivisionName == divisionName);
         }
 
         public void Dispose()

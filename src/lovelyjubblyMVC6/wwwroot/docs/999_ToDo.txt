@@ -2,7 +2,9 @@
 
 1) inject webcontext
 2) add division, coachimage, fixtureimage, headerimage, cheerleaderimage to team model
-> team and fixture view model update
+> team view model - sort after add doesn't work
+> fixture view model update
+> remove standings server side and db, will do this on client side like footballcomps
 3) twitter taghelper, scoreboard taghelper
 4) contact page
 5) localisation and middleware

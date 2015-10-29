@@ -156,4 +156,32 @@
         },
         template: { require: 'text!../components/season-dropdown.html' }
     });
+
+    ko.components.register('division-dropdown', {
+        viewModel: function (params) {
+
+            var self = this;
+            self.divisionNames = ko.observableArray([]);
+            // default to a local observable if value not provided
+            var selectedDivision = params.value || ko.observable();
+
+            $.ajax({
+                url: 'http://lovelyjubblymvc6.azurewebsites.net/api/Divisions',
+                type: 'get',
+                contentType: 'application/json',
+                success: function (data) {
+                    self.divisionNames.removeAll();
+                    $.each(data, function (i) {
+                        self.divisionNames.push({ name: data[i].DivisionName, id: data[i].DivisionId});
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+            self.selectedDivision = selectedDivision;
+        },
+        template: { require: 'text!../components/division-dropdown.html' }
+    });
 });

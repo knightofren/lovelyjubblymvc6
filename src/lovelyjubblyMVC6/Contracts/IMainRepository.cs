@@ -20,5 +20,8 @@ namespace lovelyjubblyMVC6.Contracts
         Fixture AddFixture(Fixture fixture);
         Fixture UpdateFixture(Fixture fixture);
         bool DeleteFixture(int fixtureId);
+        IQueryable<Division> GetDivisions();
+        Division GetDivisionById(int divisionId);
+        Division GetDivisionByDivisionName(string divisionName);
     }
 }

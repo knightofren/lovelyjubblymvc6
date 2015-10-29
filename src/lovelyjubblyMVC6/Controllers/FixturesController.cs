@@ -16,12 +16,6 @@ namespace lovelyjubblyMVC6.Controllers
     public class FixturesController : Controller
     {
         private readonly IMainRepository _repository = new MainRepository();
-        private lovelyjubblyMVC6WebApiContext _context;
-
-        public FixturesController(lovelyjubblyMVC6WebApiContext context)
-        {
-            _context = context;
-        }
 
         [Route("Fixtures")]
         public ActionResult Fixtures()
