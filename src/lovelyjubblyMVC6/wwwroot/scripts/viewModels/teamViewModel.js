@@ -91,6 +91,7 @@
                                                     result.CheerleaderImage, result.CoachImage,
                                                     result.DivisionId, result.Division.DivisionName,
                                                     result.HeaderImage, result.LogoImage));
+                            self.teams.sort(function (l, r) { return l.TeamName > r.TeamName ? 1 : -1; });
                             //clear form
                             self.TeamName('');
                             self.CheerleaderImage('');
