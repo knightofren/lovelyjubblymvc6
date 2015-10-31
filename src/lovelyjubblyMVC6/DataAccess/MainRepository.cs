@@ -15,7 +15,7 @@ namespace lovelyjubblyMVC6.DataAccess
 
         public IQueryable<Team> GetTeams()
         {
-            return _db.Teams.Include(t => t.Division).AsQueryable().OrderBy(t => t.TeamName);
+            return _db.Teams.Include(t => t.Division).OrderBy(t => t.TeamName).AsQueryable();
         }
 
         public Team GetTeamById(int teamId)
@@ -123,7 +123,7 @@ namespace lovelyjubblyMVC6.DataAccess
 
         public IQueryable<Division> GetDivisions()
         {
-            return _db.Divisions.AsQueryable().OrderBy(t => t.DivisionName);
+            return _db.Divisions.OrderBy(t => t.DivisionName).AsQueryable();
         }
 
         public Division GetDivisionById(int divisionId)

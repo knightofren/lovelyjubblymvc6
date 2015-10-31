@@ -91,7 +91,12 @@
                                                     result.CheerleaderImage, result.CoachImage,
                                                     result.DivisionId, result.Division.DivisionName,
                                                     result.HeaderImage, result.LogoImage));
-                            self.teams.sort(function (l, r) { return l.TeamName > r.TeamName ? 1 : -1; });
+                            //case insensitive sorting
+                            self.teams.sort(function (a, b) {
+                                if (a.TeamName.toLowerCase() < b.TeamName.toLowerCase()) return -1;
+                                if (a.TeamName.toLowerCase() > b.TeamName.toLowerCase()) return 1;
+                                return 0;
+                            });
                             //clear form
                             self.TeamName('');
                             self.CheerleaderImage('');
@@ -137,7 +142,12 @@
                             self.teams.push(new team(self.Id(), self.TeamName(), self.CheerleaderImage(),
                                 self.CoachImage(), self.DivisionId(), data.Division.DivisionName,
                                 self.HeaderImage(), self.LogoImage()));
-                            self.teams.sort(function (l, r) { return l.TeamName > r.TeamName ? 1 : -1; });
+                            //case insensitive sorting
+                            self.teams.sort(function (a, b) {
+                                if (a.TeamName.toLowerCase() < b.TeamName.toLowerCase()) return -1;
+                                if (a.TeamName.toLowerCase() > b.TeamName.toLowerCase()) return 1;
+                                return 0;
+                            });
 
                             //clear inputs
                             self.Id(undefined);
@@ -213,6 +223,12 @@
                                             data[i].CheerleaderImage, data[i].CoachImage,
                                             data[i].DivisionId, data[i].Division.DivisionName,
                                             data[i].HeaderImage, data[i].LogoImage));
+                });
+                //case insensitive sorting
+                self.teams.sort(function (a, b) {
+                    if (a.TeamName.toLowerCase() < b.TeamName.toLowerCase()) return -1;
+                    if (a.TeamName.toLowerCase() > b.TeamName.toLowerCase()) return 1;
+                    return 0;
                 });
             },
             error: function (err) {
