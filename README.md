@@ -1,10 +1,19 @@
 # lovelyjubblymvc6
 
 Self-learning project planned to eventually incorporate : 
-MVC 6, Entity Framework 7, KnockoutJS, Javascript/Typescript, SASS/LESS, Bootstrap, Microsoft Composition, OWIN, Claims Based Authentication
+* `MVC 6`
+* `Entity Framework 7`
+* `KnockoutJS`
+* `Javascript/Typescript`
+* `SASS/LESS`
+* `Bootstrap` 
+* `Microsoft Composition`
+* `OWIN`
+* `Claims Based Authentication`
 
-Run locally, and navigate to /Fixtures to add/edit/delete fixtures using KnockoutJS
+##Running the project 
+- Navigate to `/Fixtures` to add/edit/delete fixtures using KnockoutJS
 
-Navigate to /Teams to add/edit/delete teams using KnockoutJS
+- Navigate to `/Teams` to add/edit/delete teams using KnockoutJS
 
-Main page accessible to users will be /Main/Index
+- Main page accessible to users will be `/Main/Index`
