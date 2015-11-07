@@ -136,6 +136,16 @@ namespace lovelyjubblyMVC6.DataAccess
             return _db.Divisions.FirstOrDefault(c => c.DivisionName == divisionName);
         }
 
+        public IQueryable<QBRating> GetQBRatings()
+        {
+            return _db.QBRatings.Include(t => t.Team).OrderByDescending(t => t.Season).AsQueryable();
+        }
+
+        public QBRating GetQBRatingById(int qbRatingId)
+        {
+            return _db.QBRatings.Include(t => t.Team).FirstOrDefault(c => c.QBRatingId == qbRatingId);
+        }
+
         public void Dispose()
         {
             throw new NotImplementedException();

@@ -23,5 +23,7 @@ namespace lovelyjubblyMVC6.Contracts
         IQueryable<Division> GetDivisions();
         Division GetDivisionById(int divisionId);
         Division GetDivisionByDivisionName(string divisionName);
+        IQueryable<QBRating> GetQBRatings();
+        QBRating GetQBRatingById(int qbRatingId);
     }
 }
