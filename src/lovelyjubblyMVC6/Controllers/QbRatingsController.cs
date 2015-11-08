@@ -13,14 +13,55 @@ using Microsoft.Framework.Logging;
 
 namespace lovelyjubblyMVC6.Controllers
 {
-    public class HistoryController : Controller
+    public class QBRatingsController : Controller
     {
-        //use ActionName attribute to allow you to start your action with a number or 
-        //include any character that .net does not allow in an identifier
+        private readonly IMainRepository _repository = new MainRepository();
+
+        [Route("QBRatings")]
+        public IActionResult QBRatings()
+        {
+            return View();
+        }
+
         [ActionName("2021")]
         public ActionResult Season2021()
         {
             return View("Season2021");
+        }
+
+        //GET : api/QBRatings
+        [HttpGet("api/QBRatings")]
+        public IQueryable<QBRating> GetAllQBRatings()
+        {
+            return _repository.GetQBRatings();
+        }
+
+        //GET : api/QBRatings/5
+        [HttpGet("api/QBRatings/{qbRatingId:int}")]
+        public IActionResult GetQBRatingById(int qbRatingId)
+        {
+            var qbRating = _repository.GetQBRatingById(qbRatingId);
+
+            if (qbRating == null)
+            {
+                return HttpNotFound();
+            }
+
+            return new ObjectResult(qbRating);
+        }
+
+        //GET : api/QBRatingsBySeason/2018
+        [HttpGet("api/QBRatingsBySeason/{season}")]
+        public IActionResult GetQBRatingsBySeason(string season)
+        {
+            var qbrating = _repository.GetQBRatingsBySeason(season);
+
+            if (qbrating == null)
+            {
+                return HttpNotFound();
+            }
+
+            return new ObjectResult(qbrating);
         }
     }
 }

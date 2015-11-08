@@ -13,35 +13,14 @@ using Microsoft.Framework.Logging;
 
 namespace lovelyjubblyMVC6.Controllers
 {
-    public class QBRatingsController : Controller
+    public class HistoryController : Controller
     {
-        private readonly IMainRepository _repository = new MainRepository();
-
-        [Route("QBRatings")]
-        public IActionResult QBRatings()
+        //use ActionName attribute to allow you to start your action with a number or 
+        //include any character that .net does not allow in an identifier
+        [ActionName("2021")]
+        public ActionResult Season2021()
         {
-            return View();
-        }
-
-        //GET : api/QBRatings
-        [HttpGet("api/QBRatings")]
-        public IQueryable<QBRating> GetAllQBRatings()
-        {
-            return _repository.GetQBRatings();
-        }
-
-        //GET : api/QBRatings/5
-        [HttpGet("api/QBRatings/{qbRatingId:int}")]
-        public IActionResult GetQBRatingById(int qbRatingId)
-        {
-            var qbRating = _repository.GetQBRatingById(qbRatingId);
-
-            if (qbRating == null)
-            {
-                return HttpNotFound();
-            }
-
-            return new ObjectResult(qbRating);
+            return View("Season2021");
         }
     }
 }
