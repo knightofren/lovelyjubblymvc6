@@ -7,9 +7,19 @@ using lovelyjubblyMVC6.DataAccess;
 namespace lovelyjubblyMVC6.Migrations
 {
     [ContextType(typeof(lovelyjubblyMVC6WebApiContext))]
-    partial class lovelyjubblyMVC6WebApiContextModelSnapshot : ModelSnapshot
+    partial class addtournamentsremovestandings
     {
-        public override void BuildModel(ModelBuilder builder)
+        public override string Id
+        {
+            get { return "20151109191533_addtournamentsremovestandings"; }
+        }
+        
+        public override string ProductVersion
+        {
+            get { return "7.0.0-beta5-13549"; }
+        }
+        
+        public override void BuildTargetModel(ModelBuilder builder)
         {
             builder
                 .Annotation("SqlServer:DefaultSequenceName", "DefaultSequence")
@@ -100,26 +110,6 @@ namespace lovelyjubblyMVC6.Migrations
                     b.Annotation("Relational:TableName", "QBRatings");
                 });
             
-            builder.Entity("lovelyjubblyMVC6.Models.RegularSeasonWins", b =>
-                {
-                    b.Property<int>("RegularSeasonWinsId")
-                        .GenerateValueOnAdd()
-                        .StoreGeneratedPattern(StoreGeneratedPattern.Identity)
-                        .Annotation("SqlServer:ValueGeneration", "Identity");
-                    
-                    b.Property<string>("Season")
-                        .Required()
-                        .Annotation("MaxLength", 4);
-                    
-                    b.Property<int>("TeamId");
-                    
-                    b.Property<int>("Wins");
-                    
-                    b.Key("RegularSeasonWinsId");
-                    
-                    b.Annotation("Relational:TableName", "RegularSeasonWins");
-                });
-            
             builder.Entity("lovelyjubblyMVC6.Models.Team", b =>
                 {
                     b.Property<int>("TeamId")
@@ -178,13 +168,6 @@ namespace lovelyjubblyMVC6.Migrations
                 });
             
             builder.Entity("lovelyjubblyMVC6.Models.QBRating", b =>
-                {
-                    b.Reference("lovelyjubblyMVC6.Models.Team")
-                        .InverseCollection()
-                        .ForeignKey("TeamId");
-                });
-            
-            builder.Entity("lovelyjubblyMVC6.Models.RegularSeasonWins", b =>
                 {
                     b.Reference("lovelyjubblyMVC6.Models.Team")
                         .InverseCollection()

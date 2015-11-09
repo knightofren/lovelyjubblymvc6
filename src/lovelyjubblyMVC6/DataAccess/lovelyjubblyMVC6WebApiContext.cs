@@ -19,7 +19,7 @@ namespace lovelyjubblyMVC6.DataAccess
         public DbSet<Coach> Coaches { get; set; }
         public DbSet<QBRating> QBRatings { get; set; }
         public DbSet<Fixture> Fixtures { get; set; }
-        public DbSet<Standing> Standings { get; set; }
+        //public DbSet<Standing> Standings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -63,19 +63,34 @@ namespace lovelyjubblyMVC6.DataAccess
             entityFixture.Property(p => p.AwayTeamScore);
             entityFixture.Property(p => p.HomeTeamScore);
 
+            //Tournament
+            var entityTournament = modelBuilder.Entity<Tournament>();
+            entityTournament.Table("Tournaments");
+            entityTournament.Property(c => c.TournamentId).ForSqlServer().UseIdentity();
+            entityTournament.Property(p => p.TournamentName).Required().MaxLength(100); //translates to non-nullable
+            entityTournament.Property(p => p.Season).Required().MaxLength(4);
+
+            //RegularSeasonWins
+            var entityRegularSeasonWins = modelBuilder.Entity<RegularSeasonWins>();
+            entityRegularSeasonWins.Table("RegularSeasonWins");
+            entityRegularSeasonWins.Property(c => c.RegularSeasonWinsId).ForSqlServer().UseIdentity();
+            entityRegularSeasonWins.Property(p => p.TeamId).Required();
+            entityRegularSeasonWins.Property(p => p.Season).Required().MaxLength(4);
+            entityRegularSeasonWins.Property(p => p.Wins).Required();
+
             //Standing
-            var entityStanding = modelBuilder.Entity<Standing>();
-            entityStanding.Table("Standings");
-            entityStanding.Property(q => q.StandingId).ForSqlServer().UseIdentity();
-            entityStanding.Property(p => p.Season).Required().MaxLength(4);
-            entityStanding.Property(p => p.DivisionId).Required();
-            entityStanding.Property(p => p.TeamId).Required();
-            entityStanding.Property(p => p.CoachId).Required();
-            entityStanding.Property(p => p.Won).Required();
-            entityStanding.Property(p => p.Lost).Required();
-            entityStanding.Property(p => p.Tied).Required();
-            entityStanding.Property(p => p.PointsFor).Required();
-            entityStanding.Property(p => p.PointsAgainst).Required();
+            //var entityStanding = modelBuilder.Entity<Standing>();
+            //entityStanding.Table("Standings");
+            //entityStanding.Property(q => q.StandingId).ForSqlServer().UseIdentity();
+            //entityStanding.Property(p => p.Season).Required().MaxLength(4);
+            //entityStanding.Property(p => p.DivisionId).Required();
+            //entityStanding.Property(p => p.TeamId).Required();
+            //entityStanding.Property(p => p.CoachId).Required();
+            //entityStanding.Property(p => p.Won).Required();
+            //entityStanding.Property(p => p.Lost).Required();
+            //entityStanding.Property(p => p.Tied).Required();
+            //entityStanding.Property(p => p.PointsFor).Required();
+            //entityStanding.Property(p => p.PointsAgainst).Required();
         }
     }
 }
