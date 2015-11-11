@@ -1,4 +1,4 @@
-﻿require(['knockout', 'viewModels/teamViewModel', 'viewModels/fixtureViewModel', 'domReady!'], function (ko, teamViewModel, fixtureViewModel) {
+﻿require(['knockout', 'viewModels/teamViewModel', 'viewModels/fixtureViewModel', 'viewModels/qbratingViewModel', 'domReady!'], function (ko, teamViewModel, fixtureViewModel, qbratingViewModel) {
 
     //require
     require({
@@ -21,7 +21,7 @@
 
     //combine multiple view models into master view model as KO is designed for one view model per app
     //and one call to applyBindings
-    var masterVM = { team: new teamViewModel(), fixture: new fixtureViewModel() };
+    var masterVM = { team: new teamViewModel(), fixture: new fixtureViewModel(), qbrating: new qbratingViewModel() };
 
     ko.applyBindingsWithValidation(masterVM);
 });

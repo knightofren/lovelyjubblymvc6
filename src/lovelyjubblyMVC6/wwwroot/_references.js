@@ -14,4 +14,5 @@
 /// <reference path="scripts/require.js" />
 /// <reference path="scripts/text.js" />
 /// <reference path="scripts/viewModels/fixtureViewModel.js" />
+/// <reference path="scripts/viewModels/qbratingViewModel.js" />
 /// <reference path="scripts/viewModels/teamViewModel.js" />
