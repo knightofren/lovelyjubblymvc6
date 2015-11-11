@@ -10,6 +10,7 @@ Self-learning project planned to eventually incorporate :
 * `Microsoft Composition`
 * `OWIN`
 * `Claims Based Authentication`
+* `Gulp`
 
 ##Running the project 
 - Navigate to `/Fixtures` to add/edit/delete fixtures using KnockoutJS
