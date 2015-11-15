@@ -2,7 +2,7 @@
 @addTagHelper "*, lovelyjubblyMVC6"
 
 @{
-    ViewBag.Title = "QB Ratings 2021";
+    ViewBag.Title = "QB Ratings 2020";
     Layout = "~/Views/Shared/_LayoutMetro.cshtml";
 }
 
@@ -13,7 +13,7 @@
     <div style="width: 100%">
         <div class="grid" style="margin: 0 auto;">
             <div class="row" style="padding-top: 40px;">
-                <h3 class="text-light" style="text-align: center;">QB Ratings (2021)</h3>
+                <h3 class="text-light" style="text-align: center;">QB Ratings (2020)</h3>
             </div>
             <div id="divQBRatings">
                 <table class="bordered" style="width: 80%; margin: 0 auto;">
@@ -28,7 +28,7 @@
                         </tr>
                     </thead>
                     <tbody data-bind="foreach: qbrating.qbratings">
-                        <tr class="qbrating2021">
+                        <tr class="qbrating2020">
                             <td style="padding: 4px 4px 4px 4px;" data-bind="text:TeamName"></td>
                             <td style="padding: 4px 4px 4px 4px;" data-bind="text:Completion"></td>
                             <td style="padding: 4px 4px 4px 4px;" data-bind="text:Gain"></td>

@@ -7,9 +7,11 @@ using System.Threading;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Loader.IIS;
+using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.AspNet.Razor.Runtime.TagHelpers;
 using Microsoft.AspNet.Razor.TagHelpers;
+using Microsoft.AspNet.Routing;
 using Newtonsoft.Json;
 
 namespace lovelyjubblyMVC6.Helpers
@@ -113,6 +115,9 @@ namespace lovelyjubblyMVC6.Helpers
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
+        [ViewContext]
+        public ViewContext ViewContext { get; set; }
+
         //inject httpContext into class
         public ClientVariablesTagHelper(IHttpContextAccessor httpContextAccessor)
         {
@@ -133,8 +138,10 @@ namespace lovelyjubblyMVC6.Helpers
 
             // Build ClientSide Model
             sb.AppendLine("var Model = {");
-            sb.AppendLine("     'debug'                         : " + JsonConvert.SerializeObject(Debugger.IsAttached) + ",");
-            sb.AppendLine("httpMethod : " + JsonConvert.SerializeObject(_httpContextAccessor.HttpContext.Request.Method));
+            sb.AppendLine("debug                       : " + JsonConvert.SerializeObject(Debugger.IsAttached) + ",");
+            sb.AppendLine("controller : " + JsonConvert.SerializeObject(ViewContext.RouteData.Values["controller"]) + ",");
+            sb.AppendLine("action : " + JsonConvert.SerializeObject(ViewContext.RouteData.Values["action"]) + ",");
+            sb.AppendLine("httpMethod : " + JsonConvert.SerializeObject(_httpContextAccessor.HttpContext.Request.Method) + ",");
             sb.AppendLine("userAgent : " + JsonConvert.SerializeObject(_httpContextAccessor.HttpContext.Request.Headers["user-agent"]));
             //sb.AppendLine("     'currentCulture'                : " + JsonConvert.SerializeObject(Thread.CurrentThread.CurrentCulture.Name) + ",");
             //sb.AppendLine("     'currentUiCulture'              : " + JsonConvert.SerializeObject(Thread.CurrentThread.CurrentUICulture.Name));

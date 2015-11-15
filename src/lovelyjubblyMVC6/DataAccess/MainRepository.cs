@@ -148,7 +148,7 @@ namespace lovelyjubblyMVC6.DataAccess
 
         public IQueryable<QBRating> GetQBRatingsBySeason(string season)
         {
-            return _db.QBRatings.Where(c => c.Season == season);
+            return _db.QBRatings.Include(q => q.Team).Where(c => c.Season == season);
         }
 
         public void Dispose()

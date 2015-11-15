@@ -22,5 +22,23 @@ namespace lovelyjubblyMVC6.Controllers
         {
             return View("Season2021");
         }
+
+        [ActionName("2020")]
+        public ActionResult Season2020()
+        {
+            return View("Season2020");
+        }
+
+        [ActionName("2019")]
+        public ActionResult Season2019()
+        {
+            return View("Season2019");
+        }
+
+        [ActionName("2018")]
+        public ActionResult Season2018()
+        {
+            return View("Season2018");
+        }
     }
 }

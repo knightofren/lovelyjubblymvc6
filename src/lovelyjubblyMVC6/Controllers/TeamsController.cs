@@ -23,6 +23,26 @@ namespace lovelyjubblyMVC6.Controllers
             return View();
         }
 
+        public ActionResult Arizona()
+        {
+            return View("Arizona");
+        }
+
+        public ActionResult Atlanta()
+        {
+            return View("Atlanta");
+        }
+
+        public ActionResult Buffalo()
+        {
+            return View("Buffalo");
+        }
+
+        public ActionResult Carolina()
+        {
+            return View("Carolina");
+        }
+
         //GET : api/Teams
         [HttpGet("api/Teams")]
         public IQueryable<Team> GetAllTeams()

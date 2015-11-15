@@ -40,10 +40,10 @@
                     <li>
                         <a href="#" class="dropdown-toggle">Teams</a>
                         <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="Arizona.html">Arizona Cardinals</a></li>
-                            <li><a href="Atlanta.html">Atlanta Falcons</a></li>
-                            <li><a href="Buffalo.html">Buffalo Bills</a></li>
-                            <li><a href="Carolina.html">Carolina Panthers</a></li>
+                            <li><a asp-controller="Teams" asp-action="Arizona">Arizona Cardinals</a></li>
+                            <li><a asp-controller="Teams" asp-action="Atlanta">Atlanta Falcons</a></li>
+                            <li><a asp-controller="Teams" asp-action="Buffalo">Buffalo Bills</a></li>
+                            <li><a asp-controller="Teams" asp-action="Carolina">Carolina Panthers</a></li>
                             <li><a href="Chicago.html">Chicago Bears</a></li>
                             <li><a href="Cincinnati.html">Cincinnati Bengals</a></li>
                             <li><a href="Cleveland.html">Cleveland Browns</a></li>
@@ -81,9 +81,9 @@
                         <a href="#" class="dropdown-toggle">QB Ratings</a>
                         <ul class="d-menu" data-role="dropdown" data-no-close="true">
                             <li><a asp-controller="QBRatings" asp-action="2021">2021</a></li>
-                            <li><a href="2020.html">2020</a></li>
-                            <li><a href="2019.html">2019</a></li>
-                            <li><a href="2018.html">2018</a></li>
+                            <li><a asp-controller="QBRatings" asp-action="2020">2020</a></li>
+                            <li><a asp-controller="QBRatings" asp-action="2019">2019</a></li>
+                            <li><a asp-controller="QBRatings" asp-action="2018">2018</a></li>
                             <li><a href="2017.html">2017</a></li>
                             <li><a href="2016.html">2016</a></li>
                             <li><a href="2015.html">2015</a></li>
@@ -102,9 +102,9 @@
                         <a href="#" class="dropdown-toggle">League History</a>
                         <ul class="d-menu" data-role="dropdown" data-no-close="true">
                             <li><a asp-controller="History" asp-action="2021">2021</a></li>
-                            <li><a href="2020.html">2020</a></li>
-                            <li><a href="2019.html">2019</a></li>
-                            <li><a href="2018.html">2018</a></li>
+                            <li><a asp-controller="History" asp-action="2020">2020</a></li>
+                            <li><a asp-controller="History" asp-action="2019">2019</a></li>
+                            <li><a asp-controller="History" asp-action="2018">2018</a></li>
                             <li><a href="2017.html">2017</a></li>
                             <li><a href="2016.html">2016</a></li>
                             <li><a href="2015.html">2015</a></li>
@@ -166,12 +166,22 @@
         <script src="~/lib/metro/docs/js/metro.js"></script>
         @*<script src="~/lib/metro/docs/js/docs.js"></script>*@
         <script src="~/lib/metro/docs/js/prettify/run_prettify.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/knockout/dist/knockout.js"></script>
+        <script src="~/lib/Knockout-Validation/Dist/knockout.validation.js"></script>
+        <!--main.js will initialise the ko view models-->
+        <script type="text/javascript" data-main="/Scripts/main.js" src="~/Scripts/require.js"></script>
     </environment>
     <environment names="Staging,Production">
         <!--metro ui-->
         <script src="~/lib/metro/docs/js/metro.js"></script>
         @*<script src="~/lib/metro/docs/js/docs.js"></script>*@
         <script src="~/lib/metro/docs/js/prettify/run_prettify.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/knockout/dist/knockout.js"></script>
+        <script src="~/lib/Knockout-Validation/Dist/knockout.validation.js"></script>
+        <!--main.js will initialise the ko view models-->
+        <script type="text/javascript" data-main="/Scripts/main.js" src="~/Scripts/require.js"></script>
         @*<script src="~/bundles/bundle.min.js"></script>*@
     </environment>
 

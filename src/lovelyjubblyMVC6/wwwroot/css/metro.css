@@ -3253,6 +3253,18 @@ table tbody tr.qbrating2021 {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+table tbody tr.qbrating2020 {
+  background-color: #e3c800 !important;
+  color: #ffffff !important;
+}
+table tbody tr.qbrating2019 {
+  background-color: #e3c800 !important;
+  color: #ffffff !important;
+}
+table tbody tr.qbrating2018 {
+  background-color: #128023 !important;
+  color: #ffffff !important;
+}
 table.bordered {
   border: 1px #ccc solid !important;
 }
