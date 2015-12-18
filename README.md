@@ -3,7 +3,7 @@
 Self-learning project planned to eventually incorporate : 
 * `MVC 6`
 * `Entity Framework 7`
-* `KnockoutJS`
+* `AngularJS`
 * `Javascript/Typescript`
 * `SASS/LESS`
 * `Bootstrap` 
@@ -13,8 +13,8 @@ Self-learning project planned to eventually incorporate :
 * `Gulp`
 
 ##Running the project 
-- Navigate to `/Fixtures` to add/edit/delete fixtures using KnockoutJS
+- Navigate to `en-GB/Fixtures` to add/edit/delete fixtures using KnockoutJS
 
-- Navigate to `/Teams` to add/edit/delete teams using KnockoutJS
+- Navigate to `en-GB/Teams` to add/edit/delete teams using KnockoutJS
 
-- Main page accessible to users will be `/Main/Index`
+- Main page accessible to users will be `en-GB/Main/Index`
